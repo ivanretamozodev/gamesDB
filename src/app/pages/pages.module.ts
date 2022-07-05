@@ -15,7 +15,8 @@ import { PrimengModule } from '../primeng/primeng.module';
   ],
   imports: [
     CommonModule,
-    PrimengModule
+    PrimengModule,
+
   ],
   exports:[
     CardComponent,

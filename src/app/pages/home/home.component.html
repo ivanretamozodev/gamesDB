@@ -1,1 +1,13 @@
-<app-card></app-card>
+
+<div class="card__container">
+    
+    
+    <div 
+        *ngFor="let game of gamelist">
+     
+            <app-card [game]="game"></app-card>
+        
+    </div>
+
+    <p-paginator [rows]="10" [totalRecords]="100"></p-paginator>
+</div>

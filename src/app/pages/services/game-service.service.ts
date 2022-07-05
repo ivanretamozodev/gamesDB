@@ -7,7 +7,7 @@ import { GameList } from '../interfaces/Games.interface';
 @Injectable({
   providedIn: 'root'
 })
-export class GameServiceService {
+export class GameService {
 
   baseUrl: string = environment.baseUrl
   apiKey: string = environment.apiKey
