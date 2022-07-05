@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: "https://api.rawg.io/api",
+  apiKey: "074a275ca29d455888bb66d0a517bd1d"
 };
 
 /*
