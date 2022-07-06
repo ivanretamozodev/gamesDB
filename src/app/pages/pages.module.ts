@@ -4,6 +4,8 @@ import { CardComponent } from './components/card/card.component';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
 import { PrimengModule } from '../primeng/primeng.module';
+import { PaginatorComponent } from './components/paginator/paginator.component';
+
 
 
 
@@ -11,7 +13,9 @@ import { PrimengModule } from '../primeng/primeng.module';
   declarations: [
     CardComponent,
     DetailsComponent,
-    HomeComponent
+    HomeComponent,
+    PaginatorComponent,
+
   ],
   imports: [
     CommonModule,
@@ -19,9 +23,12 @@ import { PrimengModule } from '../primeng/primeng.module';
 
   ],
   exports:[
+    
     CardComponent,
     DetailsComponent,
-    HomeComponent
+    HomeComponent,
+    PaginatorComponent,
+
   ]
 })
 export class PagesModule { }
