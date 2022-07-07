@@ -5,6 +5,7 @@ import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
 import { PrimengModule } from '../primeng/primeng.module';
 import { PaginatorComponent } from './components/paginator/paginator.component';
+import { LatestGamesComponent } from './components/latest-games/latest-games.component';
 
 
 
@@ -15,6 +16,7 @@ import { PaginatorComponent } from './components/paginator/paginator.component';
     DetailsComponent,
     HomeComponent,
     PaginatorComponent,
+    LatestGamesComponent,
 
   ],
   imports: [

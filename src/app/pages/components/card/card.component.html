@@ -1,15 +1,15 @@
-<p-card [subheader]="game.name"  [style]="{'width': '22rem','margin-top': '1em'}">
+<p-card [header]="game.name"  [style]="{ 'border-radius': '13px' ,'width': '22rem','margin-top': '1em'}">
+    
     <ng-template pTemplate="header">
         <img [alt]="game.name" [src]="game.background_image">
-        <span><i class="pi pi-star-fill"></i> {{game.rating}} </span>
     </ng-template>
     <ng-template  pTemplate="content">
         <p class="genre rounded" *ngFor="let platform of game.parent_platforms">
            {{platform.platform.name}}
         </p>
     </ng-template>
-    <ng-template pTemplate="footer">
-        <p-button label="More Details" icon="pi pi-check"></p-button>
+    <ng-template  pTemplate="footer">
+        <button pButton type="button" label="Details" class="p-button-outlined" [routerLink]="['details/',game.id]"></button>
     </ng-template>
     
 </p-card>

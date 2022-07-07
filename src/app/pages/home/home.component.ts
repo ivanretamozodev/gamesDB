@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   gamelist: Result[] = []
 
   ngOnInit(): void {
-    this.gameservice.getLatestGames()
+    this.gameservice.getGameList()
     .subscribe((gamelist : GameList) => {
       console.log(gamelist)
       this.gamelist = gamelist.results

@@ -8,14 +8,17 @@ import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
     CommonModule,
+    AppRoutingModule,
     FormsModule,
     HttpClientModule,
     PagesModule,

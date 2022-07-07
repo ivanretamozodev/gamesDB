@@ -1,15 +1,21 @@
+<div class="home">
 
+    <div class="container">
+        
+        <app-latest-games></app-latest-games>
+        
+    </div>
     
-
-    
-    <div class="container"
+    <div 
         *ngFor="let game of gamelist">
      
-            <app-card [game]="game"></app-card>
+    <app-card [game]="game"></app-card>
         
     </div>
 
+</div>
 
+<app-paginator></app-paginator>
   
 
   
