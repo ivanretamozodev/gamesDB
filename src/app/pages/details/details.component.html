@@ -1,3 +1,63 @@
-<h1>
-    <img [src]="" alt="">
-</h1>
+<div>
+    <div  *ngIf="gameDetails" class="container">
+
+
+    <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '1200px'}" [numVisible]="5"
+        [circular]="true" [autoPlay]="true" [showItemNavigators]="false" [showThumbnails]="false" [transitionInterval]="4000">
+        
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item.image" style="width: 100%; display: block;" />
+        </ng-template>
+<!--  -->
+        <ng-template pTemplate="footer">
+            <h1 class="title">
+                {{gameDetails.name | titlecase}}
+            </h1>
+        </ng-template>
+
+    </p-galleria>
+
+    
+        <h3 class="titles">
+            Genres 
+           </h3>
+           <p-divider></p-divider>
+           <div class="platforms">
+               <div class="" *ngFor="let genre of gameDetails.genres">
+                   <p>{{genre.name}}</p>
+               </div>
+           </div>
+           
+    <h3 class="titles">
+     plattforms 
+    </h3>
+    <p-divider></p-divider>
+    <div class="platforms">
+        <div *ngFor="let platform of gameDetails.platforms">
+            <p>{{platform.platform.name}}</p>
+        </div>
+    </div>
+
+    <h3 class="titles">
+        publisher 
+       </h3>
+       <p-divider></p-divider>
+       <div class="platforms">
+           <div *ngFor="let publisher of gameDetails.publishers">
+               <p>{{publisher.name | titlecase}}</p>
+           </div>
+       </div>
+<!-- 
+    <p-fieldset legend="About" style="margin : 1em" [toggleable]="true">
+        <p>{{gameDetails.description_raw}}</p>
+    </p-fieldset> -->
+
+
+
+    
+</div>
+    <div class="container">
+        <p-progressSpinner *ngIf="!gameDetails"></p-progressSpinner>
+    </div>
+
+</div>
