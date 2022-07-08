@@ -8,9 +8,11 @@ import {CarouselModule} from 'primeng/carousel';
 import {FieldsetModule} from 'primeng/fieldset';
 import {GalleriaModule} from 'primeng/galleria';
 import {InputTextModule} from 'primeng/inputtext';
+import {ImageModule} from 'primeng/image';
 import {MenubarModule} from 'primeng/menubar';
 import {PaginatorModule} from 'primeng/paginator';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {TabViewModule} from 'primeng/tabview';
 
 
 
@@ -25,9 +27,11 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
    FieldsetModule,
    GalleriaModule,
    InputTextModule,
+   ImageModule,
    MenubarModule,
    PaginatorModule,
    ProgressSpinnerModule,
+   TabViewModule
  ]
 })
 export class PrimengModule { }
