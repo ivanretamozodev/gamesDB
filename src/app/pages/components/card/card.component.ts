@@ -4,15 +4,13 @@ import { Result } from '../../interfaces/Games.interface';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
+  @Input() gamelist: Result[] = [];
+  @Input() category: string = '';
 
-  @Input() game!: Result
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -1,4 +1,12 @@
-
-<p-menubar>
-    <input type="text" pInputText placeholder="Search">
-</p-menubar>
+<div class="container">
+  <h2>Game-App</h2>
+  <p-button
+    type="button"
+    class="mr-2"
+    (click)="display = true"
+    icon="pi pi-arrow-left"
+  ></p-button>
+</div>
+<p-sidebar [(visible)]="display" position="right" [baseZIndex]="10000">
+  <h3>Right Sidebar</h3>
+</p-sidebar>
