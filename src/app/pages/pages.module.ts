@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { PrimengModule } from '../primeng/primeng.module';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { LatestGamesComponent } from './components/latest-games/latest-games.component';
+import { GamesComponent } from './games/games.component';
 
 
 
@@ -17,6 +18,7 @@ import { LatestGamesComponent } from './components/latest-games/latest-games.com
     HomeComponent,
     PaginatorComponent,
     LatestGamesComponent,
+    GamesComponent,
 
   ],
   imports: [
