@@ -1,1 +1,16 @@
-<p>games works!</p>
+<div class="container" *ngIf="isAvailable">
+  <div class="grid">
+    <div>
+      <app-card [gamelist]="games"></app-card>
+    </div>
+  </div>
+  <p-paginator
+    [rows]="10"
+    [totalRecords]="100"
+    (onPageChange)="paginate($event)"
+  ></p-paginator>
+</div>
+
+<div class="spinner" *ngIf="!isAvailable">
+  <p-progressSpinner></p-progressSpinner>
+</div>

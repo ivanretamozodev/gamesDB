@@ -1,4 +1,9 @@
-<app-latest-games></app-latest-games>
-<div>
-  <app-card [category]="'Popular Games'" [gamelist]="gamelist"></app-card>
+<div *ngIf="isAvailable">
+  <app-latest-games [games]="latestGames"></app-latest-games>
+  <div>
+    <app-card [category]="'Popular Games'" [gamelist]="gamelist"></app-card>
+  </div>
+</div>
+<div class="spinner" *ngIf="!isAvailable">
+  <p-progressSpinner></p-progressSpinner>
 </div>

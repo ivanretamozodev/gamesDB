@@ -16,8 +16,7 @@ span {
 
 @media (min-width: 768px) {
   .img {
-    height: 65vh;
-    background-position: top;
+    height: 75vh;
   }
   span {
     font-size: 1.8rem;

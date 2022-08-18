@@ -23,8 +23,10 @@ export class GameService {
   }
 
   //games shows in initial display
-  getGameList(): Observable<GameList> {
-    return this.http.get<GameList>(`${this.baseUrl}/games?&key=${this.apiKey}`);
+  getGameList(page: string = '1'): Observable<GameList> {
+    return this.http.get<GameList>(
+      `${this.baseUrl}/games?key=${this.apiKey}&page=${page}`
+    );
   }
 
   //get game details page
