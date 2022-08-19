@@ -12,11 +12,12 @@
           </div>
         </ng-template>
         <div class="grid">
-          <div class="col-12 sm:col-6 md:col-6">
+          <div class="col-12 md:col-12 lg:col-6">
             <p-galleria
               [value]="images"
               [responsiveOptions]="responsiveOptions"
               [containerStyle]="{ width: '100%' }"
+              [circular]="true"
               [numVisible]="5"
               [autoPlay]="true"
             >
@@ -30,7 +31,7 @@
               </ng-template>
             </p-galleria>
           </div>
-          <div class="col-12 sm:col-6 md:col-6">
+          <div class="col-12 md:col-12 lg:col-6">
             <h2 class="title">{{ gameDetails.name }}</h2>
             <div class="stat">
               <div class="label">released:</div>
@@ -45,8 +46,28 @@
               <div class="value">{{ gameDetails.esrb_rating.name }}</div>
             </div>
             <div class="tags">
-              <h2 class="title">{{ gameDetails.name }}</h2>
-              <p-tag value="New"></p-tag>
+              <h2 class="title">plattforms</h2>
+              <div
+                class="container-tags"
+                *ngFor="let platform of gameDetails.platforms"
+              >
+                <p-tag severity="info" [value]="platform.platform.name"></p-tag>
+              </div>
+            </div>
+            <div class="tags">
+              <h2 class="title">Genres</h2>
+              <div
+                class="container-tags"
+                *ngFor="let genre of gameDetails.genres"
+              >
+                <p-tag severity="info" [value]="genre.name"></p-tag>
+              </div>
+            </div>
+            <div class="tags">
+              <h2 class="title">tags</h2>
+              <div class="container-tags" *ngFor="let tag of gameDetails.tags">
+                <p-tag severity="info" [value]="tag.name"></p-tag>
+              </div>
             </div>
           </div>
         </div>
