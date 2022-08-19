@@ -1,5 +1,6 @@
 <div class="container">
   <h2 class="category">{{ category }}</h2>
+
   <div class="grid">
     <div
       *ngFor="let game of gamelist"
@@ -9,7 +10,11 @@
         <ng-template pTemplate="header">
           <img [alt]="game.name" [src]="game.background_image" />
         </ng-template>
-        <p-button label="details" class="p-button-lg"></p-button>
+        <p-button
+          label="details"
+          [routerLink]="['/details/', game.id]"
+          class="p-button-sm"
+        ></p-button>
       </p-card>
     </div>
   </div>

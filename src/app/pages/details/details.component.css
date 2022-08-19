@@ -1,0 +1,26 @@
+.image-gallery {
+  width: 100%;
+}
+
+.image {
+  object-fit: cover;
+  height: 65vh;
+}
+
+.title {
+  line-height: 1.5;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.stat {
+  display: flex;
+  margin-bottom: 1rem;
+  align-content: center;
+  justify-content: space-between;
+}
+.label {
+  font-size: bold;
+  margin-right: 1rem;
+}

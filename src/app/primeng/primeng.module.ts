@@ -13,6 +13,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { PaginatorModule } from 'primeng/paginator';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { TabViewModule } from 'primeng/tabview';
+import { TagModule } from 'primeng/tag';
 import { SidebarModule } from 'primeng/sidebar';
 
 @NgModule({
@@ -30,6 +31,7 @@ import { SidebarModule } from 'primeng/sidebar';
     PaginatorModule,
     ProgressSpinnerModule,
     TabViewModule,
+    TagModule,
     SidebarModule,
   ],
 })
