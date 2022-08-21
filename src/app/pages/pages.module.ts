@@ -4,35 +4,22 @@ import { CardComponent } from './components/card/card.component';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
 import { PrimengModule } from '../primeng/primeng.module';
-import { PaginatorComponent } from './components/paginator/paginator.component';
 import { LatestGamesComponent } from './components/latest-games/latest-games.component';
 import { GamesComponent } from './games/games.component';
-
-
-
+import { GameDetailsComponent } from './components/game-details/game-details.component';
+import { GalleriaComponent } from './components/galleria/galleria.component';
 
 @NgModule({
   declarations: [
     CardComponent,
     DetailsComponent,
     HomeComponent,
-    PaginatorComponent,
     LatestGamesComponent,
     GamesComponent,
-
+    GameDetailsComponent,
+    GalleriaComponent,
   ],
-  imports: [
-    CommonModule,
-    PrimengModule,
-
-  ],
-  exports:[
-    
-    CardComponent,
-    DetailsComponent,
-    HomeComponent,
-    PaginatorComponent,
-
-  ]
+  imports: [CommonModule, PrimengModule],
+  exports: [CardComponent, DetailsComponent, HomeComponent],
 })
-export class PagesModule { }
+export class PagesModule {}

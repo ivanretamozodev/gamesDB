@@ -3,6 +3,7 @@
   height: 35vh;
   object-fit: cover;
   border-radius: 1rem;
+  filter: brightness(0.8);
 }
 
 span {

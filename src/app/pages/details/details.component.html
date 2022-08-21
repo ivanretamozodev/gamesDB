@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="isAvailable" class="container">
   <div class="grid">
     <div class="col-12">
       <p-card>
@@ -9,70 +9,22 @@
               [src]="gameDetails.background_image"
               alt=""
             />
+            <h2 class="image-title">{{ gameDetails.name }}</h2>
           </div>
         </ng-template>
         <div class="grid">
           <div class="col-12 md:col-12 lg:col-6">
-            <p-galleria
-              [value]="images"
-              [responsiveOptions]="responsiveOptions"
-              [containerStyle]="{ width: '100%' }"
-              [circular]="true"
-              [numVisible]="5"
-              [autoPlay]="true"
-            >
-              <ng-template pTemplate="item" let-image>
-                <img [src]="image.image" style="width: 100%; display: block" />
-              </ng-template>
-              <ng-template pTemplate="thumbnail" let-item>
-                <div class="grid grid-nogutter justify-content-center">
-                  <img class="image-gallery" [src]="item.image" />
-                </div>
-              </ng-template>
-            </p-galleria>
+            <galleria [images]="images"></galleria>
           </div>
           <div class="col-12 md:col-12 lg:col-6">
-            <h2 class="title">{{ gameDetails.name }}</h2>
-            <div class="stat">
-              <div class="label">released:</div>
-              <div class="value">{{ gameDetails.released }}</div>
-            </div>
-            <div class="stat">
-              <div class="label">developers:</div>
-              <div class="value">{{ gameDetails.developers[0].name }}</div>
-            </div>
-            <div class="stat">
-              <div class="label">esrb rating:</div>
-              <div class="value">{{ gameDetails.esrb_rating.name }}</div>
-            </div>
-            <div class="tags">
-              <h2 class="title">plattforms</h2>
-              <div
-                class="container-tags"
-                *ngFor="let platform of gameDetails.platforms"
-              >
-                <p-tag severity="info" [value]="platform.platform.name"></p-tag>
-              </div>
-            </div>
-            <div class="tags">
-              <h2 class="title">Genres</h2>
-              <div
-                class="container-tags"
-                *ngFor="let genre of gameDetails.genres"
-              >
-                <p-tag severity="info" [value]="genre.name"></p-tag>
-              </div>
-            </div>
-            <div class="tags">
-              <h2 class="title">tags</h2>
-              <div class="container-tags" *ngFor="let tag of gameDetails.tags">
-                <p-tag severity="info" [value]="tag.name"></p-tag>
-              </div>
-            </div>
+            <game-details [gameDetails]="gameDetails"></game-details>
           </div>
         </div>
-        <ng-template pTemplate="footer"> Footer content here </ng-template>
       </p-card>
     </div>
   </div>
+</div>
+
+<div *ngIf="!isAvailable" class="spinner">
+  <p-progressSpinner></p-progressSpinner>
 </div>

@@ -1,0 +1,17 @@
+<p-galleria
+  [value]="images"
+  [responsiveOptions]="responsiveOptions"
+  [containerStyle]="{ width: '100%' }"
+  [circular]="true"
+  [numVisible]="5"
+  [autoPlay]="true"
+>
+  <ng-template pTemplate="item" let-image>
+    <img [src]="image.image" style="width: 100%; display: block" />
+  </ng-template>
+  <ng-template pTemplate="thumbnail" let-item>
+    <div class="grid grid-nogutter justify-content-center">
+      <img class="image-gallery" [src]="item.image" />
+    </div>
+  </ng-template>
+</p-galleria>

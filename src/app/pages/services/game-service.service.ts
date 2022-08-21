@@ -18,7 +18,7 @@ export class GameService {
   //games shows in caroussel
   getLatestGames(): Observable<GameList> {
     return this.http.get<GameList>(
-      `${this.baseUrl}/games?dates=2022-01-01,2022-12-31&ordering=-rating?&key=${this.apiKey}`
+      `${this.baseUrl}/games?dates=2022-06-01,2022-12-31&ordering=-rating?&key=${this.apiKey}`
     );
   }
 

@@ -12,20 +12,7 @@ import { GameImagesResponse, images } from '../interfaces/GameImages.interface';
 export class DetailsComponent implements OnInit {
   gameDetails!: GameDetail;
   images!: images[];
-  responsiveOptions: any[] = [
-    {
-      breakpoint: '1024px',
-      numVisible: 5,
-    },
-    {
-      breakpoint: '768px',
-      numVisible: 3,
-    },
-    {
-      breakpoint: '560px',
-      numVisible: 3,
-    },
-  ];
+  isAvailable: boolean = false;
 
   constructor(
     private gameservice: GameService,
@@ -36,7 +23,7 @@ export class DetailsComponent implements OnInit {
     this.activatedroute.params.subscribe(({ id }) => {
       this.gameservice.getGameDetails(id).subscribe((games: GameDetail) => {
         this.gameDetails = games;
-        console.log(games);
+        this.isAvailable = true;
       });
     });
     this.activatedroute.params.subscribe(({ id }) => {
@@ -44,7 +31,6 @@ export class DetailsComponent implements OnInit {
         .getImagesOfGames(id)
         .subscribe((images: GameImagesResponse) => {
           this.images = images.results;
-          console.log(this.images);
         });
     });
   }
