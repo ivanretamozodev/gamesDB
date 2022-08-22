@@ -1,2 +1,0 @@
-1 crear la barra de busqueda de juegos
-2 crear llamadas al api en la pantalla de inicio
