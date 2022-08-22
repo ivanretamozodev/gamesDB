@@ -11,19 +11,19 @@
   <div class="label">esrb rating:</div>
   <div class="value">{{ gameDetails.esrb_rating.name }}</div>
 </div>
-<div class="tags">
-  <h2 class="title">plattforms</h2>
+<div *ngIf="gameDetails.platforms" class="tags">
+  <h2 class="title">platforms</h2>
   <div class="container-tags" *ngFor="let platform of gameDetails.platforms">
     <p-tag severity="info" [value]="platform.platform.name"></p-tag>
   </div>
 </div>
-<div class="tags">
+<div *ngIf="gameDetails.genres" class="tags">
   <h2 class="title">Genres</h2>
   <div class="container-tags" *ngFor="let genre of gameDetails.genres">
     <p-tag severity="info" [value]="genre.name"></p-tag>
   </div>
 </div>
-<div class="tags">
+<div *ngIf="gameDetails.tags" class="tags">
   <h2 class="title">tags</h2>
   <div class="container-tags" *ngFor="let tag of gameDetails.tags">
     <p-tag severity="info" [value]="tag.name"></p-tag>

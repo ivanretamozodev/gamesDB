@@ -42,4 +42,9 @@ export class GameService {
       `${this.baseUrl}/games/${id}/screenshots?key=${this.apiKey}`
     );
   }
+  searchGame(searchValue: string) {
+    return this.http.get<GameList>(
+      `${this.baseUrl}/games?search=${searchValue}&key=${this.apiKey}`
+    );
+  }
 }

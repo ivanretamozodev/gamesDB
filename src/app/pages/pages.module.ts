@@ -8,6 +8,7 @@ import { LatestGamesComponent } from './components/latest-games/latest-games.com
 import { GamesComponent } from './games/games.component';
 import { GameDetailsComponent } from './components/game-details/game-details.component';
 import { GalleriaComponent } from './components/galleria/galleria.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { GalleriaComponent } from './components/galleria/galleria.component';
     GamesComponent,
     GameDetailsComponent,
     GalleriaComponent,
+    CarouselComponent,
   ],
   imports: [CommonModule, PrimengModule],
   exports: [CardComponent, DetailsComponent, HomeComponent],

@@ -2,8 +2,14 @@
   <app-latest-games [games]="latestGames"></app-latest-games>
   <div>
     <app-card [category]="'Popular Games'" [gamelist]="gamelist"></app-card>
+    <app-card [category]="'Most valorated'" [gamelist]="gamelist"></app-card>
+    <app-card [category]="'Popular Games'" [gamelist]="gamelist"></app-card>
+  </div>
+  <div class="button">
+    <button routerLink="/games" pButton label="All Games"></button>
   </div>
 </div>
+
 <div class="spinner" *ngIf="!isAvailable">
   <p-progressSpinner></p-progressSpinner>
 </div>

@@ -8,22 +8,30 @@ import { GameService } from '../services/game-service.service';
   styleUrls: ['./games.component.css'],
 })
 export class GamesComponent implements OnInit {
+  searchBinding: string = '';
   isAvailable: boolean = false;
   games: Result[] = [];
 
-  constructor(private game: GameService) {}
+  constructor(private gameService: GameService) {}
 
   ngOnInit(): void {
-    this.game.getGameList().subscribe((games) => {
+    this.gameService.getGameList().subscribe((games) => {
       this.games = games.results;
       this.isAvailable = true;
     });
   }
 
   getGamePage(pageNum: string) {
-    this.game.getGameList(pageNum).subscribe((games) => {
+    this.gameService.getGameList(pageNum).subscribe((games) => {
       this.games = games.results;
       this.isAvailable = true;
+    });
+  }
+
+  changeSearch() {
+    console.log(this.searchBinding);
+    this.gameService.searchGame(this.searchBinding).subscribe((games) => {
+      this.games = games.results;
     });
   }
 

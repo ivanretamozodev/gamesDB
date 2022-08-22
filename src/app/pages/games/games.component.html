@@ -1,5 +1,21 @@
 <div class="container" *ngIf="isAvailable">
   <div class="grid">
+    <div class="col-12">
+      <div class="p-fluid">
+        <span class="p-input-icon-right">
+          <i class="pi pi-search"></i>
+          <input
+            type="text"
+            pInputText
+            placeholder="Search Games"
+            [(ngModel)]="searchBinding"
+            (keyup)="changeSearch()"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
     <div>
       <app-card [gamelist]="games"></app-card>
     </div>
