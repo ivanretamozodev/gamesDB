@@ -1,9 +1,9 @@
 <div *ngIf="isAvailable">
   <app-latest-games [games]="latestGames"></app-latest-games>
   <div>
-    <app-card [category]="'Popular Games'" [gamelist]="gamelist"></app-card>
-    <app-card [category]="'Most valorated'" [gamelist]="gamelist"></app-card>
-    <app-card [category]="'Popular Games'" [gamelist]="gamelist"></app-card>
+    <app-card [category]="'Action Games'" [gamelist]="actionGames"></app-card>
+    <app-card [category]="'Shooter Games'" [gamelist]="shooterGames"></app-card>
+    <app-card [category]="'Racing Games'" [gamelist]="racingGames"></app-card>
   </div>
   <div class="button">
     <button routerLink="/games" pButton label="All Games"></button>

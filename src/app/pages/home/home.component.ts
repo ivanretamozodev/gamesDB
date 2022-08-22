@@ -10,13 +10,23 @@ import { GameList, Result } from '../interfaces/Games.interface';
 export class HomeComponent implements OnInit {
   constructor(private gameservice: GameService) {}
   isAvailable: boolean = false;
-  gamelist: Result[] = [];
+  actionGames: Result[] = [];
   latestGames: Result[] = [];
+  racingGames!: Result[];
+  shooterGames!: Result[];
 
   ngOnInit(): void {
-    this.gameservice.getGameList().subscribe((gamelist: GameList) => {
-      this.gamelist = gamelist.results.slice(0, 6);
-    });
+    this.gameservice
+      .getGamesByGenres('racing')
+      .subscribe((games) => (this.racingGames = games.results.slice(0, 6)));
+
+    this.gameservice
+      .getGamesByGenres('action')
+      .subscribe((games) => (this.actionGames = games.results.slice(0, 6)));
+
+    this.gameservice
+      .getGamesByGenres('shooter')
+      .subscribe((games) => (this.shooterGames = games.results.slice(0, 6)));
 
     this.gameservice.getLatestGames().subscribe((games) => {
       this.latestGames = games.results;

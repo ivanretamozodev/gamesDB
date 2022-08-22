@@ -22,6 +22,12 @@ export class GameService {
     );
   }
 
+  getGamesByGenres(genre: string): Observable<GameList> {
+    return this.http.get<GameList>(
+      `${this.baseUrl}/games?genres=${genre}&key=${this.apiKey}`
+    );
+  }
+
   //games shows in initial display
   getGameList(page: string = '1'): Observable<GameList> {
     return this.http.get<GameList>(
