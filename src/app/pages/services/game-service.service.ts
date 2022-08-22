@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { Observable, switchMap } from 'rxjs';
+import { Observable } from 'rxjs';
 import { GameList } from '../interfaces/Games.interface';
 import { GameDetail } from '../interfaces/GameDetails.interface';
 import { GameImagesResponse } from '../interfaces/GameImages.interface';
