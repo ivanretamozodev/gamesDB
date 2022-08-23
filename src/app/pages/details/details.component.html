@@ -2,21 +2,11 @@
   <div class="grid">
     <div class="col-12">
       <p-card>
-        <ng-template pTemplate="header">
-          <div class="bg-image">
-            <img
-              class="image-gallery image"
-              [src]="gameDetails.background_image"
-              alt=""
-            />
-            <h2 class="image-title">{{ gameDetails.name }}</h2>
-          </div>
-        </ng-template>
         <div class="grid">
-          <div class="col-12 md:col-12 lg:col-6">
+          <div class="col-12 md:col-12 lg:col-8">
             <galleria [images]="images"></galleria>
           </div>
-          <div class="col-12 md:col-12 lg:col-6">
+          <div class="col-12 md:col-12 lg:col-4">
             <game-details [gameDetails]="gameDetails"></game-details>
           </div>
         </div>

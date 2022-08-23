@@ -28,3 +28,13 @@
   justify-content: center;
   margin-top: 1rem;
 }
+.image {
+  width: 100%;
+  filter: blur(0.8);
+  border-radius: 5px;
+}
+.image-title {
+  position: relative;
+  bottom: 4rem;
+  text-align: center;
+}
