@@ -1,4 +1,3 @@
-<h2 class="title-game title">{{ gameDetails.name }}</h2>
 <div class="stat">
   <div class="label">released:</div>
   <div class="value">{{ gameDetails.released }}</div>
@@ -14,18 +13,21 @@
 <div *ngIf="gameDetails.platforms" class="tags">
   <h2 class="title">platforms</h2>
   <div class="container-tags" *ngFor="let platform of gameDetails.platforms">
-    <p-tag severity="info" [value]="platform.platform.name"></p-tag>
+    <p-tag severity="primary" [value]="platform.platform.name"></p-tag>
   </div>
 </div>
 <div *ngIf="gameDetails.genres" class="tags">
   <h2 class="title">Genres</h2>
   <div class="container-tags" *ngFor="let genre of gameDetails.genres">
-    <p-tag severity="info" [value]="genre.name"></p-tag>
+    <p-tag severity="primary" [value]="genre.name"></p-tag>
   </div>
 </div>
 <div *ngIf="gameDetails.tags" class="tags">
   <h2 class="title">tags</h2>
   <div class="container-tags" *ngFor="let tag of gameDetails.tags">
-    <p-tag severity="info" [value]="tag.name"></p-tag>
+    <p-tag severity="primary" [value]="tag.name"></p-tag>
   </div>
+</div>
+<div class="button">
+  <button pButton label="back" routerLink="/games"></button>
 </div>

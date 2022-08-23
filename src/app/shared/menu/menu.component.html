@@ -1,14 +1,10 @@
-<div class="container">
+<nav class="container">
   <a routerLink="/">
-    <h2>NGames</h2>
+    <h3>NGames</h3>
   </a>
-  <p-button
-    type="button"
-    class="mr-2"
-    (click)="display = true"
-    icon="pi pi-arrow-left"
-  ></p-button>
-</div>
-<p-sidebar [(visible)]="display" position="right" [baseZIndex]="10000">
-  <h3>Right Sidebar</h3>
-</p-sidebar>
+  <ul class="nav-links">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/games">All Games</a></li>
+    <li><a routerLink="/games">Categories</a></li>
+  </ul>
+</nav>

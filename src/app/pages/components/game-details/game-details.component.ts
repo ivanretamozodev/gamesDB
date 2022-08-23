@@ -6,10 +6,8 @@ import { GameDetail } from '../../interfaces/GameDetails.interface';
   templateUrl: './game-details.component.html',
   styleUrls: ['./game-details.component.css'],
 })
-export class GameDetailsComponent implements OnInit {
+export class GameDetailsComponent {
   @Input() gameDetails!: GameDetail;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

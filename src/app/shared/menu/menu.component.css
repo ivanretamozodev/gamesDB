@@ -4,3 +4,11 @@
   align-items: center;
   background-color: #1e1e1e;
 }
+.nav-links {
+  display: block;
+  list-style: none;
+}
+.nav-links li {
+  display: inline;
+  margin-right: 15px;
+}
