@@ -29,19 +29,19 @@
 ###
 
 <div align="center">
-  <img height="600" src="https://i.ibb.co/Xzd1tTY/screencapture-localhost-4200-2022-08-23-17-11-48.png"  />
+  <img width="100%" src="https://i.ibb.co/Xzd1tTY/screencapture-localhost-4200-2022-08-23-17-11-48.png"  />
 </div>
 
 ###
 
 <div align="center">
-  <img height="600" src="https://i.ibb.co/QrWKLdQ/screencapture-localhost-4200-details-58753-2022-08-23-17-11-12.png"  />
+  <img width="100%" src="https://i.ibb.co/QrWKLdQ/screencapture-localhost-4200-details-58753-2022-08-23-17-11-12.png"  />
 </div>
 
 ###
 
 <div align="center">
-  <img height="600" src="https://i.ibb.co/n0ncRwC/screencapture-localhost-4200-games-2022-08-23-17-20-50.png"  />
+  <img width="100%" src="https://i.ibb.co/n0ncRwC/screencapture-localhost-4200-games-2022-08-23-17-20-50.png"  />
 </div>
 
 ###
