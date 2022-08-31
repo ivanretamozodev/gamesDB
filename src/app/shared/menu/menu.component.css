@@ -12,3 +12,8 @@
   display: inline;
   margin-right: 15px;
 }
+
+img {
+  height: 30px;
+  display: inline;
+}
