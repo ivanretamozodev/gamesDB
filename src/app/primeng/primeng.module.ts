@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
@@ -19,7 +19,7 @@ import { SidebarModule } from 'primeng/sidebar';
 @NgModule({
   exports: [
     ButtonModule,
-    BrowserAnimationsModule,
+
     CardModule,
     CarouselModule,
     DividerModule,

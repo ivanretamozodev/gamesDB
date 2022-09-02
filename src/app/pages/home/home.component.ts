@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { GameService } from '../services/game-service.service';
-import { GameList, Result } from '../interfaces/Games.interface';
-import { observable, Subscription } from 'rxjs';
+import { Result } from '../interfaces/Games.interface';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',

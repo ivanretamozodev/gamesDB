@@ -23,11 +23,7 @@
   display: inline-block;
   margin: 0.5rem 0.1rem;
 }
-.button {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
+
 .image {
   width: 100%;
   filter: blur(0.8);

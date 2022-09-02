@@ -22,7 +22,7 @@ import { pagesRoutingModule } from './pages-routing.module';
     GalleriaComponent,
     CarouselComponent,
   ],
-  imports: [CommonModule, pagesRoutingModule, PrimengModule],
-  exports: [CardComponent, DetailsComponent, HomeComponent],
+  imports: [pagesRoutingModule, PrimengModule],
+  exports: [HomeComponent],
 })
 export class PagesModule {}
