@@ -6,10 +6,11 @@
     <app-card [category]="'Racing Games'" [gamelist]="racingGames"></app-card>
   </div>
   <div class="button">
-    <button routerLink="/games" pButton label="All Games"></button>
+    <button routerLink="/allgames" pButton label="All Games"></button>
   </div>
 </div>
 
 <div class="spinner" *ngIf="!isAvailable">
   <p-progressSpinner></p-progressSpinner>
 </div>
+<router-outlet></router-outlet>

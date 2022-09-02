@@ -8,9 +8,9 @@ const routes: Routes = [
   {
     path: '',
     children: [
-      { path: 'details/:id', component: DetailsComponent },
-      { path: 'games', component: GamesComponent },
       { path: 'home', component: HomeComponent },
+      { path: 'details/:id', component: DetailsComponent },
+      { path: 'allgames', component: GamesComponent },
       { path: '**', redirectTo: 'home' },
     ],
   },

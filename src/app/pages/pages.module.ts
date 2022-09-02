@@ -9,6 +9,7 @@ import { GamesComponent } from './games/games.component';
 import { GameDetailsComponent } from './components/game-details/game-details.component';
 import { GalleriaComponent } from './components/galleria/galleria.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { pagesRoutingModule } from './pages-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     GalleriaComponent,
     CarouselComponent,
   ],
-  imports: [CommonModule, PrimengModule],
+  imports: [CommonModule, pagesRoutingModule, PrimengModule],
   exports: [CardComponent, DetailsComponent, HomeComponent],
 })
 export class PagesModule {}

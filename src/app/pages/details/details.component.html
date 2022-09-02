@@ -1,4 +1,4 @@
-<div *ngIf="isAvailable" class="container">
+<div *ngIf="isGalleryAvailable && isInformationAvailable" class="container">
   <div class="grid">
     <div class="col-12">
       <p-card>
@@ -11,10 +11,13 @@
           </div>
         </div>
       </p-card>
+      <div class="button">
+        <button pButton label="All Games" routerLink="/allgames"></button>
+      </div>
     </div>
   </div>
 </div>
 
-<div *ngIf="!isAvailable" class="spinner">
+<div *ngIf="!isInformationAvailable && !isGalleryAvailable" class="spinner">
   <p-progressSpinner></p-progressSpinner>
 </div>

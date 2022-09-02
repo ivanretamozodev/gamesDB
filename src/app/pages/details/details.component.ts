@@ -13,7 +13,8 @@ import { Subscription, observable } from 'rxjs';
 export class DetailsComponent implements OnInit, OnDestroy {
   gameDetails!: GameDetail;
   images!: images[];
-  isAvailable: boolean = false;
+  isGalleryAvailable: boolean = false;
+  isInformationAvailable: boolean = false;
   listObservables$: Subscription[] = [];
 
   constructor(
@@ -26,7 +27,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
       this.activatedroute.params.subscribe(({ id }) => {
         this.gameservice.getGameDetails(id).subscribe((games: GameDetail) => {
           this.gameDetails = games;
-          this.isAvailable = true;
+          this.isInformationAvailable = true;
         });
       });
 
@@ -36,6 +37,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
           .getImagesOfGames(id)
           .subscribe((images: GameImagesResponse) => {
             this.images = images.results;
+            this.isGalleryAvailable = true;
           });
       }
     );
