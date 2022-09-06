@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { PrimengModule } from '../primeng/primeng.module';
 //componentes
 import { CardComponent } from './components/card/card.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
+
 import { DetailsComponent } from './details/details.component';
 import { GamesComponent } from './games/games.component';
 import { GameDetailsComponent } from './components/game-details/game-details.component';
@@ -21,7 +21,6 @@ import { LatestGamesComponent } from './components/latest-games/latest-games.com
     GamesComponent,
     GameDetailsComponent,
     GalleriaComponent,
-    CarouselComponent,
   ],
   imports: [pagesRoutingModule, PrimengModule],
   exports: [HomeComponent],

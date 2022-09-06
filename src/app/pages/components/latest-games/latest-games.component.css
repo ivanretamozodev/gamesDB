@@ -23,7 +23,6 @@
   left: 0;
   display: block;
   content: "";
-
   background-image: linear-gradient(
     360deg,
     rgba(0, 0, 0, 1) 0%,
@@ -51,7 +50,7 @@
 
 @media (min-width: 768px) {
   .slide__bg {
-    height: 75vh;
+    height: 65vh;
   }
 
   .slide__panel-title {
