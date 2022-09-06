@@ -8,10 +8,12 @@
     [showNavigators]="false"
     [circular]="true"
   >
-    <ng-template let-game pTemplate="item">
-      <div class="div">
-        <img class="img" [src]="game.background_image" alt="" />
-        <span>{{ game.name }}</span>
+    <ng-template class="slide" let-game pTemplate="item">
+      <div class="slide__bg">
+        <img class="slide__bg-img" [src]="game.background_image" alt="" />
+      </div>
+      <div class="slide__panel">
+        <h2 class="slide__panel-title">{{ game.name }}</h2>
       </div>
     </ng-template>
   </p-carousel>
