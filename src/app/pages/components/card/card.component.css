@@ -1,11 +1,118 @@
-img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
+.grid {
+    width: 100%;
+    justify-content: center;
 }
-.category {
-  font-size: 1.6rem;
-  margin: 0.5rem 0rem;
-  text-align: left;
+.card__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem;
+    background-color: #1e1e1e;
+}
+
+.card__header {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.card__header::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: '';
+    background-image: linear-gradient(
+        360deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 5%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+.card__header-image {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card__header-rating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: #f8ffff;
+    border: 1px solid #ba68c8;
+}
+
+h3 {
+    color: black;
+}
+
+.card__body {
+    width: 100%;
+}
+.card__body-title {
+    text-align: center;
+    margin: 0, 0.5rem;
+    padding: 0.5rem;
+}
+
+.card__body-subtitle {
+    text-align: center;
+}
+
+.card__footer {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.card__platforms {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.platform {
+    width: 32px;
+    height: 32px;
+
+    margin: 0.5rem;
+}
+
+.imagecover {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.playstation {
+    background-image: url('../../../../assets/plattforms/playstation.png');
+}
+
+.pc {
+    background-image: url('../../../../assets/plattforms/windows1.png');
+}
+
+.nintendo {
+    background-image: url('../../../../assets/plattforms/nintendo.png');
+}
+
+.xbox {
+    background-image: url('../../../../assets/plattforms/xbox.png');
+}
+.linux {
+    background-image: url('../../../../assets/plattforms/linux.png');
+}
+.mac {
+    background-image: url('../../../../assets/plattforms/mac.png');
+}
+.android {
+    background-image: url('../../../../assets/plattforms/android.png');
 }

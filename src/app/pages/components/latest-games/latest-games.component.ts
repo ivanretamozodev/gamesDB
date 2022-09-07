@@ -3,12 +3,12 @@ import { GameService } from '../../services/game-service.service';
 import { Result } from '../../interfaces/Games.interface';
 
 @Component({
-  selector: 'app-latest-games',
-  templateUrl: './latest-games.component.html',
-  styleUrls: ['./latest-games.component.css'],
+    selector: 'carousel',
+    templateUrl: './latest-games.component.html',
+    styleUrls: ['./latest-games.component.css']
 })
 export class LatestGamesComponent {
-  @Input() games: Result[] = [];
+    @Input() games: Result[] = [];
 
-  constructor(private gameservice: GameService) {}
+    constructor(private gameservice: GameService) {}
 }
