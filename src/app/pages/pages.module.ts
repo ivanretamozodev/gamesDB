@@ -11,6 +11,7 @@ import { GalleriaComponent } from './components/galleria/galleria.component';
 import { HomeComponent } from './home/home.component';
 import { pagesRoutingModule } from './pages-routing.module';
 import { LatestGamesComponent } from './components/latest-games/latest-games.component';
+import { PlatformsComponent } from './components/platforms/platforms.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { LatestGamesComponent } from './components/latest-games/latest-games.com
     GamesComponent,
     GameDetailsComponent,
     GalleriaComponent,
+    PlatformsComponent,
   ],
   imports: [pagesRoutingModule, PrimengModule],
   exports: [HomeComponent],

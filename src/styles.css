@@ -37,3 +37,37 @@ a {
     text-decoration: none;
     color: var(--white-color);
 }
+
+.imagecover {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.playstation {
+    background-image: url('./assets/plattforms/playstation.webp');
+}
+
+.pc {
+    background-image: url('./assets/plattforms/pc.webp');
+}
+
+.nintendo {
+    background-image: url('./assets/plattforms/nintendo.webp');
+}
+
+.xbox {
+    background-image: url('./assets/plattforms/xbox.webp');
+}
+.linux {
+    background-image: url('./assets/plattforms/linux.webp');
+}
+.mac {
+    background-image: url('./assets/plattforms/mac.png');
+}
+.android {
+    background-image: url('./assets/plattforms/android.webp');
+}
+.ios {
+    background-image: url('./assets/plattforms/ios.webp');
+}

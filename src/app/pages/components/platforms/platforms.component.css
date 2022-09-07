@@ -1,0 +1,22 @@
+.platform__card-image {
+    width: 65px;
+    height: 65px;
+}
+
+.platform__card-title,
+.container__title {
+    text-align: center;
+}
+
+.platform__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--bg-color-grey);
+    margin-top: 1rem;
+}
+.platform__card {
+    margin: 1rem;
+    padding: 1rem;
+}

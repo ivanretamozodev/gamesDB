@@ -1,19 +1,19 @@
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1e1e1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
 }
 .nav-links {
-  display: block;
-  list-style: none;
+    display: block;
+    list-style: none;
 }
 .nav-links li {
-  display: inline;
-  margin-right: 15px;
+    display: inline;
+    margin-right: 15px;
 }
 
 img {
-  height: 30px;
-  display: inline;
+    width: 120px;
+    display: inline;
 }

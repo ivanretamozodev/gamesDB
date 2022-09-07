@@ -1,6 +1,7 @@
 <div *ngIf="isAvailable">
     <carousel [games]="latestGames"></carousel>
 
+    <app-platforms [platforms]="platforms"></app-platforms>
     <div class="button">
         <button routerLink="/games/allgames" pButton label="All Games"></button>
     </div>
