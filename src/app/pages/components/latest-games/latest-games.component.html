@@ -1,20 +1,20 @@
 <div class="container">
-  <p-carousel
-    *ngIf="games"
-    [value]="games"
-    [autoplayInterval]="4000"
-    [numVisible]="1"
-    [showIndicators]="false"
-    [showNavigators]="true"
-    [circular]="true"
-  >
-    <ng-template class="slide" let-game pTemplate="item">
-      <div class="slide__bg">
-        <img class="slide__bg-img" [src]="game.background_image" alt="" />
-      </div>
-      <div class="slide__panel">
-        <h2 class="slide__panel-title">{{ game.name }}</h2>
-      </div>
-    </ng-template>
-  </p-carousel>
+    <p-carousel
+        *ngIf="games"
+        [value]="games"
+        [numVisible]="1"
+        [autoplayInterval]="6000"
+        [showIndicators]="false"
+        [showNavigators]="false"
+        [circular]="true"
+    >
+        <ng-template class="slide" let-game pTemplate="item">
+            <div class="slide__bg">
+                <img class="slide__bg-img" [src]="game.background_image" alt="" />
+            </div>
+            <div class="slide__panel">
+                <h2 class="slide__panel-title">{{ game.name }}</h2>
+            </div>
+        </ng-template>
+    </p-carousel>
 </div>

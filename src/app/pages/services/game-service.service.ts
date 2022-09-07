@@ -7,51 +7,45 @@ import { GameDetail } from '../interfaces/GameDetails.interface';
 import { GameImagesResponse } from '../interfaces/GameImages.interface';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root'
 })
 export class GameService {
-  baseUrl: string = environment.baseUrl;
-  apiKey: string = environment.apiKey;
+    baseUrl: string = environment.baseUrl;
+    apiKey: string = environment.apiKey;
 
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) {}
 
-  //juegos que se muestran en el carousel
-  getLatestGames(): Observable<GameList> {
-    return this.http.get<GameList>(
-      `${this.baseUrl}/games?dates=2022-06-01,2022-12-31&ordering=-rating?&key=${this.apiKey}`
-    );
-  }
-  //buscar juegos por generos
-  getGamesByGenres(genre: string): Observable<GameList> {
-    return this.http.get<GameList>(
-      `${this.baseUrl}/games?genres=${genre}&key=${this.apiKey}`
-    );
-  }
+    //juegos que se muestran en el carousel
+    getLatestGames(): Observable<GameList> {
+        return this.http.get<GameList>(
+            `${this.baseUrl}/games?key=${this.apiKey}&ordering=-released&metacritic=80,100`
+        );
+    }
+    //buscar juegos por generos
+    getGamesByGenres(genre: string): Observable<GameList> {
+        return this.http.get<GameList>(`${this.baseUrl}/games?genres=${genre}&key=${this.apiKey}`);
+    }
 
-  //juegos por defecto en la pagina principal
-  getGameList(page: string = '1'): Observable<GameList> {
-    return this.http.get<GameList>(
-      `${this.baseUrl}/games?key=${this.apiKey}&page=${page}`
-    );
-  }
+    //juegos por defecto en la pagina principal
+    getGameList(page: string = '1'): Observable<GameList> {
+        return this.http.get<GameList>(`${this.baseUrl}/games?key=${this.apiKey}&page=${page}`);
+    }
 
-  //los detalles de los juegos individuales
-  getGameDetails(id: string): Observable<GameDetail> {
-    return this.http.get<GameDetail>(
-      `${this.baseUrl}/games/${id}?key=${this.apiKey}`
-    );
-  }
+    //los detalles de los juegos individuales
+    getGameDetails(id: string): Observable<GameDetail> {
+        return this.http.get<GameDetail>(`${this.baseUrl}/games/${id}?key=${this.apiKey}`);
+    }
 
-  //obtener las imagenes de manera individial de cada juego
-  getImagesOfGames(id: number): Observable<GameImagesResponse> {
-    return this.http.get<GameImagesResponse>(
-      `${this.baseUrl}/games/${id}/screenshots?key=${this.apiKey}`
-    );
-  }
-  //buscador de juegos
-  searchGame(searchValue: string) {
-    return this.http.get<GameList>(
-      `${this.baseUrl}/games?search=${searchValue}&key=${this.apiKey}`
-    );
-  }
+    //obtener las imagenes de manera individial de cada juego
+    getImagesOfGames(id: number): Observable<GameImagesResponse> {
+        return this.http.get<GameImagesResponse>(
+            `${this.baseUrl}/games/${id}/screenshots?key=${this.apiKey}`
+        );
+    }
+    //buscador de juegos
+    searchGame(searchValue: string) {
+        return this.http.get<GameList>(
+            `${this.baseUrl}/games?search=${searchValue}&key=${this.apiKey}`
+        );
+    }
 }

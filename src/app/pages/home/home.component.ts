@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class HomeComponent implements OnInit, OnDestroy {
     constructor(private gameservice: GameService) {}
-    isAvailable: boolean = true;
+    isAvailable: boolean = false;
     actionGames: Result[] = [];
     latestGames: Result[] = [];
     racingGames!: Result[];
