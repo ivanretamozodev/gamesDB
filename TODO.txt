@@ -1,0 +1,5 @@
+objetivos del dia
+0-setear variables de colores para la app en el root✔
+
+1-tener el componente de consolas o plataformas con link a su respectiva vista 
+(si se puede que se pueda filtrar juegos por consolas,por genero y por calidad)
