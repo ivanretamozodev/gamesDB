@@ -1,12 +1,13 @@
 .platform__card-image {
     width: 65px;
     height: 65px;
-    background-color: var(--bg-color-grey);
+    margin: 0 auto;
 }
 
 .platform__card-title,
 .container__title {
     text-align: center;
+    margin-top: 0.5rem;
 }
 
 .platform__container {
@@ -15,12 +16,14 @@
     align-items: center;
     flex-wrap: wrap;
     margin-top: 1rem;
+    background-color: var(--bg-color-grey);
 }
 .platform__card {
+    max-width: 150px;
     margin: 1rem;
     padding: 1rem;
     cursor: pointer;
 }
 .platform__card:hover {
-    border: 1px solid var(--primary-color);
+    transform: scale(1.1);
 }
