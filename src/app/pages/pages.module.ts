@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { pagesRoutingModule } from './pages-routing.module';
 import { LatestGamesComponent } from './components/latest-games/latest-games.component';
 import { PlatformsComponent } from './components/platforms/platforms.component';
+import { PlatformPageComponent } from './platform-page/platform-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PlatformsComponent } from './components/platforms/platforms.component';
     GameDetailsComponent,
     GalleriaComponent,
     PlatformsComponent,
+    PlatformPageComponent,
   ],
   imports: [pagesRoutingModule, PrimengModule],
   exports: [HomeComponent],

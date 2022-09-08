@@ -3,7 +3,7 @@
 
     <div class="platform__container">
         <div class="platform__card" *ngFor="let platform of platforms">
-            <a [routerLink]="['/platform', platform.slug, platform.id]">
+            <a [routerLink]="['/platforms', platform.id, platform.slug]">
                 <div class="platform__card-image imagecover" [ngClass]="platform.slug"></div>
                 <div class="platform__card-title">{{ platform.name }}</div>
             </a>
